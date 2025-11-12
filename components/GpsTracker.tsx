@@ -7,10 +7,10 @@ const PHONE_NUMBER = "077 983 3747";
 const PHONE_LINK = "tel:+94779833747";
 
 const features = [
-  "Real-time location monitoring across Sri Lanka",
-  "Instant alerts for speed, geofence breaches, and unauthorized movement",
-  "Detailed trip history and driver behaviour insights",
-  "Compact hardware with quick, professional installation",
+  "Real-time tracking across Sri Lanka",
+  "Instant alerts for speed or movement",
+  "Trip history & driver insights",
+  "Compact device with easy setup",
 ];
 
 export default function GpsTracker() {
