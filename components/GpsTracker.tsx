@@ -1,5 +1,8 @@
 "use client";
 
+import Image from "next/image";
+import gpsTrackerImage from "@/src/tow hero.jpg";
+
 const PHONE_NUMBER = "077 983 3747";
 const PHONE_LINK = "tel:+94779833747";
 
@@ -11,14 +14,33 @@ const features = [
 ];
 
 export default function GpsTracker() {
+  const midIndex = Math.ceil(features.length / 2);
+  const featureColumns = [features.slice(0, midIndex), features.slice(midIndex)];
+
+  const CheckIcon = () => (
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      className="mt-1 h-4 w-4 flex-shrink-0 text-amber-400"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
+  );
+
   return (
     <section
       id="gps-tracker"
-      className="bg-blue-900 py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 lg:px-14 xl:px-[6rem] text-white"
+      className="bg-[#131313] py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 lg:px-14 xl:px-[6rem] text-white"
       aria-labelledby="gps-tracker-heading"
     >
-      <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-[1.1fr,0.9fr] gap-10 lg:gap-16 items-center">
-        <div className="space-y-6">
+      <div className="mx-auto max-w-6xl grid grid-cols-1 gap-10 lg:grid-cols-[0.9fr,1.1fr] lg:gap-16 items-center lg:items-stretch">
+        <div className="order-1 space-y-6 lg:order-2">
           <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-800/70 border border-blue-500 text-xs sm:text-sm uppercase tracking-[0.2em]">
             Fleet & Personal Vehicle Protection
           </p>
@@ -28,24 +50,41 @@ export default function GpsTracker() {
           >
             Stay Connected With Our Smart GPS Tracking Device
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-blue-100 max-w-xl">
-            Track every vehicle in your fleet or family in real time. Our GPS
-            device delivers instant insights, reliable coverage, and effortless
-            control through a secure mobile dashboard.
-          </p>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {features.map((feature) => (
-              <li
-                key={feature}
-                className="flex items-start gap-3 rounded-xl bg-white/10 px-5 py-4 backdrop-blur-sm"
-              >
-                <span className="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-amber-400"></span>
-                <span className="text-sm sm:text-base text-blue-100">
-                  {feature}
-                </span>
-              </li>
+          <div className="space-y-4 text-sm sm:text-base md:text-lg text-blue-100 max-w-xl">
+            <p>
+              Track every vehicle in your fleet or family in real time. Our GPS
+              device delivers instant insights, reliable coverage, and effortless
+              control through a secure mobile dashboard.
+            </p>
+            <p>
+              Built-in 4G connectivity, backup battery, and tamper alert sensors
+              keep your vehicles protected even when the ignition is off.
+            </p>
+            <div className="rounded-2xl border border-amber-400/60 bg-amber-400/10 px-5 py-4 text-sm sm:text-base text-amber-100 shadow-lg shadow-amber-500/10">
+              <p className="font-semibold text-amber-200">
+                Monthly plans start from{" "}
+                <span className="text-white">Rs. 3,500</span>
+              </p>
+              <p className="mt-1 text-amber-100/90">
+                Includes device, professional installation, and ongoing support.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 sm:gap-6">
+            {featureColumns.map((column, columnIndex) => (
+              <ul key={columnIndex} className="space-y-3 sm:space-y-4">
+                {column.map((feature) => (
+                  <li
+                    key={feature}
+                    className="flex items-start gap-3 px-1 py-1 text-sm sm:text-base text-blue-100"
+                  >
+                    <CheckIcon />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
             ))}
-          </ul>
+          </div>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
             <a
               href={PHONE_LINK}
@@ -62,36 +101,18 @@ export default function GpsTracker() {
             </a>
           </div>
         </div>
-        <div className="relative">
-          <div className="relative rounded-3xl border border-blue-200/40 bg-blue-950/30 p-6 sm:p-8 md:p-10">
-            <div className="absolute inset-6 -z-10 rounded-3xl bg-amber-400/20 blur-2xl opacity-80"></div>
-            <div className="relative flex aspect-[4/3] w-full flex-col justify-between overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 p-6 text-blue-100">
-              <div>
-                <p className="inline-flex rounded-full bg-amber-300/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-amber-200">
-                  Smart GPS Device
-                </p>
-                <h3 className="mt-4 text-2xl font-semibold text-white">
-                  Precision Tracking Hardware
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-blue-100/90">
-                  Built-in 4G connectivity, backup battery, and tamper alert
-                  sensors keep your vehicles protected even when the ignition is
-                  off.
-                </p>
-              </div>
-              <div className="grid gap-3 text-sm">
-                <p className="flex items-center justify-between rounded-xl bg-blue-900/60 px-4 py-3">
-                  <span className="font-semibold text-white">
-                    Live Tracking Dashboard
-                  </span>
-                  <span className="text-amber-300">24/7 Access</span>
-                </p>
-                <p className="rounded-xl bg-blue-900/60 px-4 py-3 text-blue-100/90">
-                  Monthly plans start from{" "}
-                  <span className="font-semibold text-white">Rs. 3,500</span>{" "}
-                  including device, installation, and support.
-                </p>
-              </div>
+        <div className="relative order-2 lg:order-1 h-full w-full">
+          <div className="relative h-[260px] sm:h-[320px] lg:h-full lg:min-h-[520px] overflow-hidden rounded-3xl border border-white/20 bg-white/10">
+            <div className="absolute inset-0 bg-black/30"></div>
+            <div className="relative h-full w-full">
+              <Image
+                src={gpsTrackerImage}
+                alt="Driver monitoring GPS tracking dashboard on a tablet inside a vehicle"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 500px, 100vw"
+                priority
+              />
             </div>
           </div>
         </div>
