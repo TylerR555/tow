@@ -35,7 +35,7 @@ export default function Header() {
       role="banner"
     >
       <nav
-        className="container mx-auto px-4 sm:px-6 md:px-8 py-3 sm:py-4 lg:py-[6px]"
+        className="container mx-auto px-4 sm:px-6 md:px-8 py-[2.5px]"
         aria-label="Main navigation"
       >
         <div className="flex items-center justify-between">
