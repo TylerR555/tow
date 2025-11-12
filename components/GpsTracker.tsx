@@ -39,7 +39,7 @@ export default function GpsTracker() {
       className="bg-[#131313] py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 lg:px-14 xl:px-[6rem] text-white"
       aria-labelledby="gps-tracker-heading"
     >
-      <div className="mx-auto max-w-6xl grid grid-cols-1 gap-10 lg:grid-cols-[0.9fr,1.1fr] lg:gap-16 items-center lg:items-stretch">
+      <div className="mx-auto max-w-6xl grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16 items-center lg:items-stretch">
         <div className="order-1 space-y-6 lg:order-2">
           <p className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-800/70 border border-blue-500 text-xs sm:text-sm uppercase tracking-[0.2em]">
             Fleet & Personal Vehicle Protection
