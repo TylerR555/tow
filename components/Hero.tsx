@@ -49,7 +49,7 @@ export default function Hero() {
             className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl xl:text-[12rem] font-bold text-amber-500 hover:text-amber-600 transition-colors duration-200 block break-all sm:break-normal"
             aria-label={`Call ${PHONE_NUMBER}`}
           >
-            {PHONE_NUMBER}
+            <span className="selectable-phone">{PHONE_NUMBER}</span>
           </a>
         </div>
 

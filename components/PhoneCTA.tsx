@@ -17,7 +17,7 @@ export default function PhoneCTA() {
           className="text-4xl sm:text-5xl md:text-6xl lg:text-[6rem] xl:text-[7rem] font-bold text-white block break-all sm:break-normal"
           aria-label={`Call ${PHONE_NUMBER}`}
         >
-          {PHONE_NUMBER}
+          <span className="selectable-phone">{PHONE_NUMBER}</span>
         </a>
       </div>
     </section>

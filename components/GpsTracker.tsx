@@ -85,7 +85,7 @@ export default function GpsTracker() {
               className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-amber-500 px-7 py-3 text-base sm:text-lg font-semibold text-blue-950 transition hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300"
               aria-label={`Call ${PHONE_NUMBER} to order the GPS tracker`}
             >
-              Call {PHONE_NUMBER}
+              Call <span className="selectable-phone">{PHONE_NUMBER}</span>
             </a>
             <a
               href="#partner-form"
