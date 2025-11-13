@@ -9,7 +9,7 @@ const PHONE_LINK = "tel:+94779833747";
 const features = [
   "Real-time tracking across Sri Lanka",
   "Instant alerts for speed or movement",
-  "Trip history & driver insights",
+  "Trip history & driver behaviour insights",
   "Compact device with easy setup",
 ];
 
@@ -52,13 +52,7 @@ export default function GpsTracker() {
           </h2>
           <div className="space-y-4 text-sm sm:text-base md:text-lg text-blue-100 max-w-xl">
             <p>
-              Track every vehicle in your fleet or family in real time. Our GPS
-              device delivers instant insights, reliable coverage, and effortless
-              control through a secure mobile dashboard.
-            </p>
-            <p>
-              Built-in 4G connectivity, backup battery, and tamper alert sensors
-              keep your vehicles protected even when the ignition is off.
+              Track every vehicle in your fleet or family in real time. Our 4G-powered tracker with backup battery and tamper alerts keeps your vehicles safe, even when parked.
             </p>
             <div className="rounded-2xl border border-amber-400/60 bg-amber-400/10 px-5 py-4 text-sm sm:text-base text-amber-100 shadow-lg shadow-amber-500/10">
               <p className="font-semibold text-amber-200">
