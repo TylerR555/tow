@@ -73,12 +73,14 @@ export default function Footer() {
               © {currentYear} RoadCare 24. All rights reserved.
             </p>
             <p className="text-gray-500 text-xs sm:text-sm">
-              Hotline:{" "}
+              Technology Partner:{" "}
               <a
-                href={PHONE_LINK}
+                href="https://syntelligenceit.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-primary hover:text-primary-light"
               >
-                <span className="selectable-phone">{PHONE_NUMBER}</span>
+                syntelligenceIT
               </a>
             </p>
           </div>
